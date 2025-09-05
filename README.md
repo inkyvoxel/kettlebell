@@ -2,6 +2,8 @@
 
 A kettlebell routine tracker.
 
+You can see a demo [here](https://inkyvoxel.github.io/kettlebell/).
+
 ## Usage
 
 Open `index.html` in a web browser to start the kettlebell routine tracker. Select your routine level and follow the step-by-step instructions with built-in rest timers.
