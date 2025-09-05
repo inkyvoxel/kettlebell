@@ -195,7 +195,6 @@ function goNext() {
     displayCurrentStep();
   } else {
     // Routine completed
-    alert("Routine completed!");
     showSelectionScreen();
   }
 }
