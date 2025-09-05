@@ -4,49 +4,49 @@ const routines = {
     {
       exercise: "Two-Handed Kettlebell Swing",
       sets: 3,
-      reps: "10-15",
+      reps: "10 to 15",
       rest: 60,
     },
     {
       exercise: "Two-Handed Kettlebell Press",
       sets: 3,
-      reps: "8-12",
+      reps: "8 to 12",
       rest: 60,
     },
-    { exercise: "Goblet Squats", sets: 3, reps: "8-12", rest: 60 },
+    { exercise: "Goblet Squats", sets: 3, reps: "8 to 12", rest: 60 },
   ],
   intermediate: [
     {
       exercise: "Two-Handed Kettlebell Swing",
       sets: 3,
-      reps: "12-15",
+      reps: "12 to 15",
       rest: 60,
     },
     {
       exercise: "Single-Arm Kettlebell Press",
       sets: 3,
-      reps: "8-12",
+      reps: "8 to 12",
       rest: 60,
       perSide: true,
     },
-    { exercise: "Goblet Squats", sets: 3, reps: "8-12", rest: 60 },
+    { exercise: "Goblet Squats", sets: 3, reps: "8 to 12", rest: 60 },
   ],
   advanced: [
     {
       exercise: "Single-Arm Kettlebell Swing",
       sets: 3,
-      reps: "12-15",
+      reps: "12 to 15",
       rest: 60,
       perSide: true,
     },
     {
       exercise: "Single-Arm Kettlebell Clean and Press",
       sets: 3,
-      reps: "8-10",
+      reps: "8 to 10",
       rest: 60,
       perSide: true,
     },
-    { exercise: "Goblet Squats", sets: 3, reps: "10-12", rest: 60 },
+    { exercise: "Goblet Squats", sets: 3, reps: "10 to 12", rest: 60 },
   ],
 };
 
