@@ -2,23 +2,28 @@
 const routines = {
   beginner: [
     {
-      exercise: "Kettlebell Swings (Two-Handed)",
+      exercise: "Two-Handed Kettlebell Swing",
       sets: 3,
       reps: "10-15",
       rest: 60,
     },
-    { exercise: "Two-Handed Overhead Press", sets: 3, reps: "8-12", rest: 60 },
+    {
+      exercise: "Two-Handed Kettlebell Press",
+      sets: 3,
+      reps: "8-12",
+      rest: 60,
+    },
     { exercise: "Goblet Squats", sets: 3, reps: "8-12", rest: 60 },
   ],
   intermediate: [
     {
-      exercise: "Kettlebell Swings (Two-Handed or Mixed)",
+      exercise: "Two-Handed Kettlebell Swing",
       sets: 3,
       reps: "12-15",
       rest: 60,
     },
     {
-      exercise: "Single-Handed Overhead Press",
+      exercise: "Single-Arm Kettlebell Press",
       sets: 3,
       reps: "8-12",
       rest: 60,
@@ -28,14 +33,14 @@ const routines = {
   ],
   advanced: [
     {
-      exercise: "Kettlebell Swings (Single-Handed)",
+      exercise: "Single-Arm Kettlebell Swing",
       sets: 3,
       reps: "12-15",
       rest: 60,
       perSide: true,
     },
     {
-      exercise: "Single-Arm Clean and Press",
+      exercise: "Single-Arm Kettlebell Clean and Press",
       sets: 3,
       reps: "8-10",
       rest: 60,
