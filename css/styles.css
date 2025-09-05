@@ -35,12 +35,12 @@ html {
 
 h1 {
   margin-bottom: 30px;
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 h2 {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: normal;
 }
 
@@ -59,7 +59,7 @@ h2 {
 
 .routine-btn {
   padding: 15px;
-  font-size: 18px;
+  font-size: 1.125rem;
   background-color: #007bff;
   color: white;
   border: none;
@@ -76,22 +76,23 @@ h2 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 50px;
 }
 
 #step-title {
-  margin: 0 0 10px 0;
-  font-size: 32px;
+  margin: 0 0 20px 0;
+  font-size: 2.25rem;
 }
 
 #step-set {
-  margin: 0 0 5px 0;
-  font-size: 24px;
+  margin: 0 0 20px 0;
+  font-size: 1.625rem;
   font-weight: normal;
 }
 
 #step-description {
-  font-size: 24px;
+  font-size: 1.625rem;
   margin: 0;
   font-weight: bold;
 }
@@ -101,7 +102,7 @@ h2 {
 }
 
 #timer p {
-  font-size: 24px;
+  font-size: 1.375rem;
   margin: 0 0 10px 0;
 }
 
@@ -129,7 +130,7 @@ h2 {
 #back-btn,
 #next-btn {
   padding: 16px 32px;
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: #6c757d;
   color: white;
   border: none;
@@ -153,30 +154,18 @@ h2 {
     padding: 10px 10px 30px 10px;
   }
   h1 {
-    font-size: 32px;
+    font-size: 2rem;
   }
   h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .routine-btn {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 12px;
   }
   #back-btn,
   #next-btn {
     padding: 14px 28px;
-    font-size: 18px;
-  }
-  #step-title {
-    font-size: 28px;
-  }
-  #step-set {
-    font-size: 22px;
-  }
-  #step-description {
-    font-size: 22px;
-  }
-  #timer p {
-    font-size: 22px;
+    font-size: 1.125rem;
   }
 }
