@@ -170,7 +170,6 @@ function clearTimer() {
 }
 
 function updateButtons() {
-  backBtn.disabled = currentStepIndex === 0;
   const isLast = currentStepIndex === currentRoutineSteps.length - 1;
   nextBtn.textContent = isLast ? "Finish" : "Next";
 }
@@ -179,6 +178,9 @@ function goBack() {
   if (currentStepIndex > 0) {
     currentStepIndex--;
     displayCurrentStep();
+  } else {
+    // On the first step, go back to the selection screen (home screen)
+    showSelectionScreen();
   }
 }
 
