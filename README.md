@@ -16,6 +16,8 @@ This routine was created based on the three kettlebell exercises I enjoy doing t
 - Clean and Press
 - Squats
 
+There are three routines that progress from 'beginner' to 'advanced'. I used Grok to put together the routines (so let that be a warning to you), and then turned the suggestions into this app to help me remember which exercises to do.
+
 ### Progression Timeline
 
 Spend 6–8 weeks on the beginner routine, then 6–12 weeks on this intermediate routine, depending on how comfortably you adapt to single-arm pressing and unilateral swing practice.
@@ -61,4 +63,4 @@ Advanced Notes:
 - Weight Selection: For Single-Arm Kettlebell Press, use a weight you can control for 8 clean reps per side (e.g., 8–12kg). If your two-handed press is 16kg, try 8–10kg per hand to start.
 - Form Focus: Keep your feet shoulder-width apart, brace your core, and avoid leaning backward or to the side during single-arm presses.
 - Practise for Advanced: During the intermediate phase, add 1–2 sets of single-arm kettlebell cleans (light weight, 5–8 reps per side) weekly to prepare for the clean and press.
-- Frequency: Do this routine 2–3 times per week, as discussed previously, ensuring adequate rest (especially if combining with running).
+- Frequency: Do this routine 2–3 times per week, ensuring adequate rest (especially if combining with running).
