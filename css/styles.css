@@ -42,7 +42,6 @@ h1 {
 h2 {
   margin-bottom: 20px;
   font-size: 1.5rem;
-  font-weight: normal;
 }
 
 #routine {
@@ -90,7 +89,6 @@ h2 {
 #step-set {
   margin: 0 0 20px 0;
   font-size: 1.625rem;
-  font-weight: normal;
 }
 
 #step-description {
