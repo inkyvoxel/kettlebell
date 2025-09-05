@@ -2,212 +2,84 @@
 const routines = {
   beginner: [
     {
-      type: "work",
       exercise: "Kettlebell Swings (Two-Handed)",
-      set: 1,
+      sets: 3,
       reps: "10-15",
+      rest: 60,
     },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Kettlebell Swings (Two-Handed)",
-      set: 2,
-      reps: "10-15",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Kettlebell Swings (Two-Handed)",
-      set: 3,
-      reps: "10-15",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Two-Handed Overhead Press",
-      set: 1,
-      reps: "8-12",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Two-Handed Overhead Press",
-      set: 2,
-      reps: "8-12",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Two-Handed Overhead Press",
-      set: 3,
-      reps: "8-12",
-    },
-    { type: "rest", duration: 60 },
-    { type: "work", exercise: "Goblet Squats", set: 1, reps: "8-12" },
-    { type: "rest", duration: 60 },
-    { type: "work", exercise: "Goblet Squats", set: 2, reps: "8-12" },
-    { type: "rest", duration: 60 },
-    { type: "work", exercise: "Goblet Squats", set: 3, reps: "8-12" },
-    { type: "rest", duration: 60 },
+    { exercise: "Two-Handed Overhead Press", sets: 3, reps: "8-12", rest: 60 },
+    { exercise: "Goblet Squats", sets: 3, reps: "8-12", rest: 60 },
   ],
   intermediate: [
     {
-      type: "work",
       exercise: "Kettlebell Swings (Two-Handed or Mixed)",
-      set: 1,
+      sets: 3,
       reps: "12-15",
+      rest: 60,
     },
-    { type: "rest", duration: 60 },
     {
-      type: "work",
-      exercise: "Kettlebell Swings (Two-Handed or Mixed)",
-      set: 2,
-      reps: "12-15",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Kettlebell Swings (Two-Handed or Mixed)",
-      set: 3,
-      reps: "12-15",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
       exercise: "Single-Handed Overhead Press",
-      set: 1,
-      reps: "8-12 reps left side",
+      sets: 3,
+      reps: "8-12",
+      rest: 60,
+      perSide: true,
     },
-    {
-      type: "work",
-      exercise: "Single-Handed Overhead Press",
-      set: 1,
-      reps: "8-12 reps right side",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Single-Handed Overhead Press",
-      set: 2,
-      reps: "8-12 reps left side",
-    },
-    {
-      type: "work",
-      exercise: "Single-Handed Overhead Press",
-      set: 2,
-      reps: "8-12 reps right side",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Single-Handed Overhead Press",
-      set: 3,
-      reps: "8-12 reps left side",
-    },
-    {
-      type: "work",
-      exercise: "Single-Handed Overhead Press",
-      set: 3,
-      reps: "8-12 reps right side",
-    },
-    { type: "rest", duration: 60 },
-    { type: "work", exercise: "Goblet Squats", set: 1, reps: "8-12" },
-    { type: "rest", duration: 60 },
-    { type: "work", exercise: "Goblet Squats", set: 2, reps: "8-12" },
-    { type: "rest", duration: 60 },
-    { type: "work", exercise: "Goblet Squats", set: 3, reps: "8-12" },
-    { type: "rest", duration: 60 },
+    { exercise: "Goblet Squats", sets: 3, reps: "8-12", rest: 60 },
   ],
   advanced: [
     {
-      type: "work",
       exercise: "Kettlebell Swings (Single-Handed)",
-      set: 1,
-      reps: "12-15 reps left side",
+      sets: 3,
+      reps: "12-15",
+      rest: 60,
+      perSide: true,
     },
     {
-      type: "work",
-      exercise: "Kettlebell Swings (Single-Handed)",
-      set: 1,
-      reps: "12-15 reps right side",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Kettlebell Swings (Single-Handed)",
-      set: 2,
-      reps: "12-15 reps left side",
-    },
-    {
-      type: "work",
-      exercise: "Kettlebell Swings (Single-Handed)",
-      set: 2,
-      reps: "12-15 reps right side",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Kettlebell Swings (Single-Handed)",
-      set: 3,
-      reps: "12-15 reps left side",
-    },
-    {
-      type: "work",
-      exercise: "Kettlebell Swings (Single-Handed)",
-      set: 3,
-      reps: "12-15 reps right side",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
       exercise: "Single-Arm Clean and Press",
-      set: 1,
-      reps: "8-10 reps left side",
+      sets: 3,
+      reps: "8-10",
+      rest: 60,
+      perSide: true,
     },
-    {
-      type: "work",
-      exercise: "Single-Arm Clean and Press",
-      set: 1,
-      reps: "8-10 reps right side",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Single-Arm Clean and Press",
-      set: 2,
-      reps: "8-10 reps left side",
-    },
-    {
-      type: "work",
-      exercise: "Single-Arm Clean and Press",
-      set: 2,
-      reps: "8-10 reps right side",
-    },
-    { type: "rest", duration: 60 },
-    {
-      type: "work",
-      exercise: "Single-Arm Clean and Press",
-      set: 3,
-      reps: "8-10 reps left side",
-    },
-    {
-      type: "work",
-      exercise: "Single-Arm Clean and Press",
-      set: 3,
-      reps: "8-10 reps right side",
-    },
-    { type: "rest", duration: 60 },
-    { type: "work", exercise: "Goblet Squats", set: 1, reps: "10-12" },
-    { type: "rest", duration: 60 },
-    { type: "work", exercise: "Goblet Squats", set: 2, reps: "10-12" },
-    { type: "rest", duration: 60 },
-    { type: "work", exercise: "Goblet Squats", set: 3, reps: "10-12" },
-    { type: "rest", duration: 60 },
+    { exercise: "Goblet Squats", sets: 3, reps: "10-12", rest: 60 },
   ],
 };
 
+// Function to expand routine into steps
+function expandRoutine(routine) {
+  const steps = [];
+  routine.forEach((item) => {
+    for (let set = 1; set <= item.sets; set++) {
+      if (item.perSide) {
+        steps.push({
+          type: "work",
+          exercise: item.exercise,
+          set,
+          reps: `${item.reps} reps left side`,
+        });
+        steps.push({
+          type: "work",
+          exercise: item.exercise,
+          set,
+          reps: `${item.reps} reps right side`,
+        });
+      } else {
+        steps.push({
+          type: "work",
+          exercise: item.exercise,
+          set,
+          reps: item.reps,
+        });
+      }
+      steps.push({ type: "rest", duration: item.rest });
+    }
+  });
+  return steps;
+}
+
 // State management
 let currentRoutine = null;
+let currentRoutineSteps = null;
 let currentStepIndex = 0;
 let timerInterval = null;
 
@@ -238,6 +110,7 @@ nextBtn.addEventListener("click", goNext);
 // Functions
 function selectRoutine(routine) {
   currentRoutine = routine;
+  currentRoutineSteps = expandRoutine(routines[currentRoutine]);
   currentStepIndex = 0;
   showRoutineScreen();
   displayCurrentStep();
@@ -249,7 +122,7 @@ function showRoutineScreen() {
 }
 
 function displayCurrentStep() {
-  const step = routines[currentRoutine][currentStepIndex];
+  const step = currentRoutineSteps[currentStepIndex];
   if (step.type === "work") {
     stepTitle.textContent = `${step.exercise} - Set ${step.set}`;
     stepDescription.textContent = `${step.reps} reps`;
@@ -290,7 +163,7 @@ function clearTimer() {
 
 function updateButtons() {
   backBtn.disabled = currentStepIndex === 0;
-  const isLast = currentStepIndex === routines[currentRoutine].length - 1;
+  const isLast = currentStepIndex === currentRoutineSteps.length - 1;
   nextBtn.textContent = isLast ? "Finish" : "Next";
 }
 
@@ -302,7 +175,7 @@ function goBack() {
 }
 
 function goNext() {
-  if (currentStepIndex < routines[currentRoutine].length - 1) {
+  if (currentStepIndex < currentRoutineSteps.length - 1) {
     currentStepIndex++;
     displayCurrentStep();
   } else {
@@ -316,6 +189,7 @@ function showSelectionScreen() {
   routineScreen.classList.add("hidden");
   selectionScreen.classList.remove("hidden");
   currentRoutine = null;
+  currentRoutineSteps = null;
   currentStepIndex = 0;
   clearTimer();
 }
