@@ -59,10 +59,15 @@ h1 {
   font-size: 24px;
 }
 
+#step-set {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
 #step-description {
   font-size: 20px;
   margin: 0;
-  font-weight: bold;
 }
 
 #timer {
@@ -127,6 +132,9 @@ h1 {
   }
   #step-title {
     font-size: 20px;
+  }
+  #step-set {
+    font-size: 18px;
   }
   #step-description {
     font-size: 18px;

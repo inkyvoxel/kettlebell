@@ -87,6 +87,7 @@ let timerInterval = null;
 const selectionScreen = document.getElementById("selection");
 const routineScreen = document.getElementById("routine");
 const stepTitle = document.getElementById("step-title");
+const stepSet = document.getElementById("step-set");
 const stepDescription = document.getElementById("step-description");
 const timerDiv = document.getElementById("timer");
 const timerDisplay = document.getElementById("timer-display");
@@ -124,12 +125,14 @@ function showRoutineScreen() {
 function displayCurrentStep() {
   const step = currentRoutineSteps[currentStepIndex];
   if (step.type === "work") {
-    stepTitle.textContent = `${step.exercise} - Set ${step.set}`;
+    stepTitle.textContent = step.exercise;
+    stepSet.textContent = `Set ${step.set}`;
     stepDescription.textContent = `${step.reps} reps`;
     timerDiv.classList.add("hidden");
     clearTimer();
   } else {
     stepTitle.textContent = "Rest";
+    stepSet.textContent = "";
     stepDescription.textContent = "";
     timerDiv.classList.remove("hidden");
     startTimer(step.duration);
