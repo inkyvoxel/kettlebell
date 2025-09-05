@@ -68,7 +68,7 @@ function expandRoutine(routine) {
           type: "work",
           exercise: item.exercise,
           set,
-          reps: item.reps,
+          reps: `${item.reps} reps`,
         });
       }
       steps.push({ type: "rest", duration: item.rest });
@@ -127,7 +127,7 @@ function displayCurrentStep() {
   if (step.type === "work") {
     stepTitle.textContent = step.exercise;
     stepSet.textContent = `Set ${step.set}`;
-    stepDescription.textContent = `${step.reps} reps`;
+    stepDescription.textContent = `${step.reps}`;
     timerDiv.classList.add("hidden");
     clearTimer();
   } else {
