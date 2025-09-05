@@ -102,7 +102,6 @@ h2 {
 }
 
 #timer p {
-  font-size: 1.375rem;
   margin: 0 0 10px 0;
 }
 
@@ -148,6 +147,29 @@ h2 {
   opacity: 0.8;
 }
 
+#overall-progress {
+  margin: 20px 0;
+}
+
+#overall-progress p {
+  margin: 0 0 10px 0;
+}
+
+#overall-progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#overall-progress-fill {
+  height: 100%;
+  background-color: #007bff;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
 /* Mobile adjustments */
 @media (max-width: 480px) {
   #app {
@@ -167,5 +189,8 @@ h2 {
   #next-btn {
     padding: 14px 28px;
     font-size: 1.125rem;
+  }
+  #overall-progress p {
+    font-size: 0.875rem;
   }
 }

@@ -129,6 +129,11 @@ function showRoutineScreen() {
 
 function displayCurrentStep() {
   const step = currentRoutineSteps[currentStepIndex];
+  const totalSteps = currentRoutineSteps.length;
+  const progress = ((currentStepIndex + 1) / totalSteps) * 100;
+  document.getElementById("progress-percent").textContent =
+    Math.round(progress) + "%";
+  document.getElementById("overall-progress-fill").style.width = progress + "%";
   if (step.type === "work") {
     stepTitle.textContent = step.exercise;
     stepSet.textContent = `Set ${step.set}`;
@@ -202,4 +207,6 @@ function showSelectionScreen() {
   currentRoutineSteps = null;
   currentStepIndex = 0;
   clearTimer();
+  document.getElementById("progress-percent").textContent = "0%";
+  document.getElementById("overall-progress-fill").style.width = "0%";
 }
