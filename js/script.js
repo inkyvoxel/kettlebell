@@ -112,6 +112,15 @@ document
   .addEventListener("click", () => selectRoutine("advanced"));
 backBtn.addEventListener("click", goBack);
 nextBtn.addEventListener("click", goNext);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    e.preventDefault();
+    goBack();
+  } else if (e.key === "ArrowRight") {
+    e.preventDefault();
+    goNext();
+  }
+});
 
 // Functions
 function selectRoutine(routine) {
