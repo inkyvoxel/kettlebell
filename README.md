@@ -4,7 +4,7 @@ A kettlebell routine tracker.
 
 ## Usage
 
-Open `index.html` in a web browser (for now).
+Open `index.html` in a web browser to start the kettlebell routine tracker. Select your routine level and follow the step-by-step instructions with built-in rest timers.
 
 ## The Routine
 

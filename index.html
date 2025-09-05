@@ -3,11 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kettlebell</title>
+    <title>Kettlebell Routine Tracker</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <h1>Kettlebell</h1>
+    <main id="app">
+      <section id="selection" class="screen">
+        <h1>Select Your Routine</h1>
+        <div class="button-group">
+          <button id="beginner-btn" class="routine-btn">Beginner</button>
+          <button id="intermediate-btn" class="routine-btn">
+            Intermediate
+          </button>
+          <button id="advanced-btn" class="routine-btn">Advanced</button>
+        </div>
+      </section>
+      <section id="routine" class="screen hidden">
+        <div id="step-display">
+          <h2 id="step-title"></h2>
+          <p id="step-description"></p>
+        </div>
+        <div id="timer" class="hidden">
+          <p>Rest for <span id="timer-display">75</span> seconds</p>
+          <div id="progress-bar">
+            <div id="progress-fill"></div>
+          </div>
+        </div>
+        <div id="controls">
+          <button id="back-btn">Back</button>
+          <button id="next-btn">Next</button>
+        </div>
+      </section>
+    </main>
     <script src="js/script.js"></script>
   </body>
 </html>
