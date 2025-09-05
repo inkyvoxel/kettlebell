@@ -150,7 +150,7 @@ function displayCurrentStep() {
     timerDiv.classList.add("hidden");
     clearTimer();
   } else {
-    stepTitle.textContent = "Rest";
+    stepTitle.textContent = "Rest 😴";
     stepSet.textContent = "";
     stepDescription.textContent = "";
     timerDiv.classList.remove("hidden");
