@@ -1,9 +1,3 @@
 #step-display {
   min-height: 180px;
 }
-
-@media (max-width: 576px) {
-  #step-display {
-    min-height: 130px;
-  }
-}
