@@ -1,12 +1,12 @@
 # Kettlebell
 
-A kettlebell routine tracker.
+An opinionated kettlebell workout guide, for a full body workout.
 
 You can see a demo [here](https://inkyvoxel.github.io/kettlebell/).
 
 ## Usage
 
-Open `index.html` in a web browser to start the kettlebell routine tracker. Select your routine level and follow the step-by-step instructions with built-in rest timers.
+Open `index.html` in a web browser to start the kettlebell workout guide. Select your routine level and follow the step-by-step instructions with built-in rest timers.
 
 ## The Routine
 

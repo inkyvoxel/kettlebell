@@ -1,4 +1,4 @@
-// Routine data for kettlebell tracker
+// Routine data for kettlebell workout guide
 const routines = {
   beginner: [
     {
