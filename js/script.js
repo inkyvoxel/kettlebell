@@ -86,6 +86,7 @@ let currentRoutine = null;
 let currentRoutineSteps = null;
 let currentStepIndex = 0;
 let timerInterval = null;
+let startTime = null;
 
 // DOM elements
 const selectionScreen = document.getElementById("selection");
@@ -137,6 +138,7 @@ function selectRoutine(routine) {
   currentRoutine = routine;
   currentRoutineSteps = expandRoutine(routines[currentRoutine]);
   currentStepIndex = 0;
+  startTime = Date.now();
   showRoutineScreen();
   displayCurrentStep();
 }
@@ -161,11 +163,22 @@ function displayCurrentStep() {
     timerDiv.setAttribute("hidden", "");
     clearTimer();
   } else {
-    stepTitle.textContent = "Rest 😴";
-    stepSet.textContent = "";
-    stepDescription.textContent = "";
-    timerDiv.removeAttribute("hidden");
-    startTimer(step.duration);
+    if (currentStepIndex === currentRoutineSteps.length - 1) {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      const minutes = Math.floor(elapsed / 60);
+      const seconds = (elapsed % 60).toString().padStart(2, "0");
+      stepTitle.textContent = "Completed! 🎉";
+      stepSet.textContent = "";
+      stepDescription.textContent = `Routine finished in: ${minutes}:${seconds}`;
+      timerDiv.setAttribute("hidden", "");
+      clearTimer();
+    } else {
+      stepTitle.textContent = "Rest 😴";
+      stepSet.textContent = "";
+      stepDescription.textContent = "";
+      timerDiv.removeAttribute("hidden");
+      startTimer(step.duration);
+    }
   }
   updateButtons();
 }
@@ -223,6 +236,7 @@ function showSelectionScreen() {
   currentRoutine = null;
   currentRoutineSteps = null;
   currentStepIndex = 0;
+  startTime = null;
   clearTimer();
   updateProgress();
 }
