@@ -2,13 +2,13 @@
 const routines = {
   beginner: [
     {
-      exercise: "Two-Handed Kettlebell Swing",
+      exercise: "Two-Handed Swing",
       sets: 3,
       reps: "10 to 15",
       rest: 60,
     },
     {
-      exercise: "Two-Handed Kettlebell Press",
+      exercise: "Two-Handed Press",
       sets: 3,
       reps: "8 to 12",
       rest: 60,
@@ -17,13 +17,13 @@ const routines = {
   ],
   intermediate: [
     {
-      exercise: "Two-Handed Kettlebell Swing",
+      exercise: "Two-Handed Swing",
       sets: 3,
       reps: "12 to 15",
       rest: 60,
     },
     {
-      exercise: "Single-Arm Kettlebell Press",
+      exercise: "Single-Arm Press",
       sets: 3,
       reps: "8 to 12",
       rest: 60,
@@ -33,14 +33,14 @@ const routines = {
   ],
   advanced: [
     {
-      exercise: "Single-Arm Kettlebell Swing",
+      exercise: "Single-Arm Swing",
       sets: 3,
       reps: "12 to 15",
       rest: 60,
       perSide: true,
     },
     {
-      exercise: "Single-Arm Kettlebell Clean and Press",
+      exercise: "Single-Arm Clean and Press",
       sets: 3,
       reps: "8 to 10",
       rest: 60,
@@ -50,7 +50,6 @@ const routines = {
   ],
 };
 
-// Function to expand routine into steps
 function expandRoutine(routine) {
   const steps = [];
   routine.forEach((item) => {
@@ -96,9 +95,20 @@ const stepSet = document.getElementById("step-set");
 const stepDescription = document.getElementById("step-description");
 const timerDiv = document.getElementById("timer");
 const timerDisplay = document.getElementById("timer-display");
-const progressFill = document.getElementById("progress-fill");
+const progressBar = document.getElementById("progress-bar");
+const progressPercent = document.getElementById("progress-percent");
+const overallProgressBar = document.getElementById("overall-progress-bar");
 const backBtn = document.getElementById("back-btn");
 const nextBtn = document.getElementById("next-btn");
+
+function updateProgress() {
+  if (!currentRoutineSteps) return; // Safety check
+  const totalSteps = currentRoutineSteps.length;
+  const progress =
+    totalSteps > 0 ? ((currentStepIndex + 1) / totalSteps) * 100 : 0;
+  progressPercent.textContent = Math.round(progress) + "%";
+  overallProgressBar.value = progress;
+}
 
 // Event listeners
 document
@@ -132,28 +142,29 @@ function selectRoutine(routine) {
 }
 
 function showRoutineScreen() {
-  selectionScreen.classList.add("hidden");
-  routineScreen.classList.remove("hidden");
+  selectionScreen.setAttribute("hidden", "");
+  routineScreen.removeAttribute("hidden");
 }
 
 function displayCurrentStep() {
+  if (!currentRoutineSteps || currentStepIndex >= currentRoutineSteps.length) {
+    return;
+  }
   const step = currentRoutineSteps[currentStepIndex];
-  const totalSteps = currentRoutineSteps.length;
-  const progress = ((currentStepIndex + 1) / totalSteps) * 100;
-  document.getElementById("progress-percent").textContent =
-    Math.round(progress) + "%";
-  document.getElementById("overall-progress-fill").style.width = progress + "%";
+
+  updateProgress();
+
   if (step.type === "work") {
     stepTitle.textContent = step.exercise;
     stepSet.textContent = `Set ${step.set}`;
     stepDescription.textContent = `${step.reps}`;
-    timerDiv.classList.add("hidden");
+    timerDiv.setAttribute("hidden", "");
     clearTimer();
   } else {
     stepTitle.textContent = "Rest 😴";
     stepSet.textContent = "";
     stepDescription.textContent = "";
-    timerDiv.classList.remove("hidden");
+    timerDiv.removeAttribute("hidden");
     startTimer(step.duration);
   }
   updateButtons();
@@ -162,16 +173,16 @@ function displayCurrentStep() {
 function startTimer(duration) {
   let timeLeft = duration;
   timerDisplay.textContent = timeLeft;
-  progressFill.style.width = "100%";
+  progressBar.value = duration;
+  progressBar.max = duration;
   timerInterval = setInterval(() => {
     timeLeft--;
     timerDisplay.textContent = timeLeft;
-    progressFill.style.width = (timeLeft / duration) * 100 + "%";
+    progressBar.value = timeLeft;
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
       timerInterval = null;
-      // Auto-advance after rest
-      goNext();
+      goNext(); // Auto-advance after rest
     }
   }, 1000);
 }
@@ -193,7 +204,6 @@ function goBack() {
     currentStepIndex--;
     displayCurrentStep();
   } else {
-    // On the first step, go back to the selection screen (home screen)
     showSelectionScreen();
   }
 }
@@ -203,18 +213,16 @@ function goNext() {
     currentStepIndex++;
     displayCurrentStep();
   } else {
-    // Routine completed
     showSelectionScreen();
   }
 }
 
 function showSelectionScreen() {
-  routineScreen.classList.add("hidden");
-  selectionScreen.classList.remove("hidden");
+  routineScreen.setAttribute("hidden", "");
+  selectionScreen.removeAttribute("hidden");
   currentRoutine = null;
   currentRoutineSteps = null;
   currentStepIndex = 0;
   clearTimer();
-  document.getElementById("progress-percent").textContent = "0%";
-  document.getElementById("overall-progress-fill").style.width = "0%";
+  updateProgress();
 }

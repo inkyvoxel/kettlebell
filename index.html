@@ -1,62 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kettlebell Routine Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.violet.min.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/voxel.css" />
   </head>
   <body>
-    <main id="app">
-      <section id="selection" class="screen">
+    <main id="app" class="container">
+      <section id="selection">
         <h1>Kettlebell Time!</h1>
-        <h2>Which routine today?</h2>
-        <div class="button-group">
-          <button id="beginner-btn" class="routine-btn">Beginner</button>
-          <button id="intermediate-btn" class="routine-btn">
-            Intermediate
-          </button>
-          <button id="advanced-btn" class="routine-btn">Advanced</button>
-        </div>
+        <p>Which routine today?</p>
+        <fieldset>
+          <div class="grid">
+            <button id="beginner-btn">Beginner</button>
+            <button id="intermediate-btn">Intermediate</button>
+            <button id="advanced-btn">Advanced</button>
+          </div>
+        </fieldset>
       </section>
-      <section id="routine" class="screen hidden">
+      <section id="routine" hidden>
         <div id="step-display">
           <h2 id="step-title"></h2>
           <h3 id="step-set"></h3>
           <p id="step-description"></p>
-        </div>
-        <div id="timer" class="hidden">
-          <p>Rest for <span id="timer-display">75</span> seconds</p>
-          <div id="progress-bar">
-            <div id="progress-fill"></div>
+          <div id="timer" hidden>
+            <p>Rest for <span id="timer-display">75</span> seconds</p>
+            <progress id="progress-bar" value="100" max="100"></progress>
           </div>
         </div>
         <div id="overall-progress">
           <p>Progress: <span id="progress-percent">0%</span></p>
-          <div id="overall-progress-bar">
-            <div id="overall-progress-fill"></div>
-          </div>
+          <progress id="overall-progress-bar" value="0" max="100"></progress>
         </div>
-        <div id="controls">
-          <button id="back-btn">Back</button>
+        <div id="controls" class="grid">
+          <button id="back-btn" class="secondary">Back</button>
           <button id="next-btn">Next</button>
         </div>
       </section>
     </main>
-    <footer id="footer">
+    <footer id="footer" class="container">
       <p>
         Made by
-        <a href="https://www.inkyvoxel.com" target="_blank">inkyvoxel</a>
+        <a href="https://www.inkyvoxel.com" target="_blank">inkyvoxel</a> ⬛
       </p>
-      <span class="voxel" aria-label="inkyvoxel logo" title="inkyvoxel">
-        <div class="face front"></div>
-        <div class="face back"></div>
-        <div class="face right"></div>
-        <div class="face left"></div>
-        <div class="face top"></div>
-        <div class="face bottom"></div>
-      </span>
     </footer>
     <script src="js/script.js"></script>
   </body>
