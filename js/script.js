@@ -92,7 +92,6 @@ let startTime = null;
 const selectionScreen = document.getElementById("selection");
 const routineScreen = document.getElementById("routine");
 const stepTitle = document.getElementById("step-title");
-const stepSet = document.getElementById("step-set");
 const stepDescription = document.getElementById("step-description");
 const timerDiv = document.getElementById("timer");
 const timerDisplay = document.getElementById("timer-display");
@@ -103,7 +102,10 @@ const backBtn = document.getElementById("back-btn");
 const nextBtn = document.getElementById("next-btn");
 
 function updateProgress() {
-  if (!currentRoutineSteps) return; // Safety check
+  if (!currentRoutineSteps) {
+    return;
+  }
+
   const totalSteps = currentRoutineSteps.length;
   const progress =
     totalSteps > 0 ? ((currentStepIndex + 1) / totalSteps) * 100 : 0;
@@ -158,8 +160,7 @@ function displayCurrentStep() {
 
   if (step.type === "work") {
     stepTitle.textContent = step.exercise;
-    stepSet.textContent = `Set ${step.set}`;
-    stepDescription.textContent = `${step.reps}`;
+    stepDescription.textContent = `${step.reps} (set ${step.set})`;
     timerDiv.setAttribute("hidden", "");
     clearTimer();
   } else {
@@ -168,13 +169,11 @@ function displayCurrentStep() {
       const minutes = Math.floor(elapsed / 60);
       const seconds = (elapsed % 60).toString().padStart(2, "0");
       stepTitle.textContent = "Completed! 🎉";
-      stepSet.textContent = "";
-      stepDescription.textContent = `Routine finished in: ${minutes}:${seconds}`;
+      stepDescription.textContent = `Finished in: ${minutes}:${seconds}`;
       timerDiv.setAttribute("hidden", "");
       clearTimer();
     } else {
       stepTitle.textContent = "Rest 😴";
-      stepSet.textContent = "";
       stepDescription.textContent = "";
       timerDiv.removeAttribute("hidden");
       startTimer(step.duration);
@@ -195,7 +194,7 @@ function startTimer(duration) {
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
       timerInterval = null;
-      goNext(); // Auto-advance after rest
+      goNext();
     }
   }, 1000);
 }
