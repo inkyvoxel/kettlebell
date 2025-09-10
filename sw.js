@@ -5,12 +5,12 @@ const urlsToCache = [
   "css/styles.css",
   "js/script.js",
   "favicon.ico",
-  "apple-touch-icon.png",
   "manifest.json",
-  "icon-192.png",
-  "icon-192-maskable.png",
-  "icon-512.png",
-  "icon-512-maskable.png",
+  "icons/apple-touch-icon.png",
+  "icons/icon-192.png",
+  "icons/icon-192-maskable.png",
+  "icons/icon-512.png",
+  "icons/icon-512-maskable.png",
   "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.violet.min.css",
 ];
 
