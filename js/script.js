@@ -135,12 +135,15 @@ document
 backBtn.addEventListener("click", goBack);
 nextBtn.addEventListener("click", goNext);
 document.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowLeft") {
-    e.preventDefault();
-    goBack();
-  } else if (e.key === "ArrowRight") {
-    e.preventDefault();
-    goNext();
+  // Only handle keys if routine screen is visible
+  if (!routineScreen.hasAttribute("hidden")) {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goBack();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goNext();
+    }
   }
 });
 
