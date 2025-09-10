@@ -2,7 +2,7 @@
   "name": "Kettlebell Workout Guide",
   "short_name": "Kettlebell",
   "description": "A guide for kettlebell workouts",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#6200ea",

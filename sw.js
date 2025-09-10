@@ -1,6 +1,6 @@
 const CACHE_NAME = "kettlebell-v1";
 const urlsToCache = [
-  "/",
+  "./",
   "index.html",
   "css/styles.css",
   "js/script.js",
