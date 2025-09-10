@@ -1,16 +1,16 @@
 const CACHE_NAME = "kettlebell-v1";
 const urlsToCache = [
   "/",
-  "/index.html",
-  "/css/styles.css",
-  "/js/script.js",
-  "/favicon.ico",
-  "/apple-touch-icon.png",
-  "/manifest.json",
-  "/icon-192.png",
-  "/icon-192-maskable.png",
-  "/icon-512.png",
-  "/icon-512-maskable.png",
+  "index.html",
+  "css/styles.css",
+  "js/script.js",
+  "favicon.ico",
+  "apple-touch-icon.png",
+  "manifest.json",
+  "icon-192.png",
+  "icon-192-maskable.png",
+  "icon-512.png",
+  "icon-512-maskable.png",
   "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.violet.min.css",
 ];
 
