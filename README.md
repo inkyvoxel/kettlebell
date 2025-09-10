@@ -6,7 +6,17 @@ You can see a demo [here](https://inkyvoxel.github.io/kettlebell/).
 
 ## Usage
 
-Open `index.html` in a web browser to start the kettlebell workout guide. Select your routine level and follow the step-by-step instructions with built-in rest timers.
+Open `index.html` in a web browser to start the kettlebell workout guide.
+
+Select your routine level and follow the step-by-step instructions with built-in rest timers.
+
+You can use 'left' and 'right' arrow keys to move backwards and forwards between steps.
+
+To test PWA capabilities, you need to serve files over HTTP using a simple server, e.g.
+
+```bash
+python3 -m http.server 8000
+```
 
 ## The Routine
 

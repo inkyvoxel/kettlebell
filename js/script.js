@@ -101,6 +101,15 @@ const overallProgressBar = document.getElementById("overall-progress-bar");
 const backBtn = document.getElementById("back-btn");
 const nextBtn = document.getElementById("next-btn");
 
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) => console.log("SW registered"))
+      .catch((error) => console.log("SW registration failed"));
+  });
+}
+
 function updateProgress() {
   if (!currentRoutineSteps) {
     return;
